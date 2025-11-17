@@ -12,7 +12,7 @@
     </header>
     <main>
     <h1 class="title">Metaphor: ReFantazio Synthesis Calculator</h1>
-        <p>A simple online tool for keeping track of the equipped party's Metaphor: ReFantazio Synthesis skills.</p>
+        <p>A simple online tool for keeping track of the current party's Metaphor: ReFantazio Synthesis skills.</p>
         <p>Select the lineage/archetype of each character in party, and a list of all active synthesis skills will appear on the right</p>
         <div class="two-column">
             <section class="panel" id="select">
@@ -36,7 +36,7 @@
                         </select>
                     </label>
                 </form>
-
+                <!-- Two-column selects; fill options as needed -->
                 <form class="select-grid" id="select-form" onsubmit="return false;">
                     <label for="select-lin-b">Select Lineage
                         <select id="select-lin-b" name="selectLinB">
@@ -56,10 +56,12 @@
                         </select>
                     </label>
                 </form>
+                <!-- Two-column selects; fill options as needed -->
+                <!-- ADD TWO MORE MEMBERS HERE -->
             </section>
             <section class="panel" id="results">
                 <h2>Results</h2>
-                <p>results here</p>
+                <div id="results-content">No results yet.</div>
             </section>
         </div>
     </main>

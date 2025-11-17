@@ -4,6 +4,7 @@ import static spark.Spark.*;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonArray;
 
 public class BackendApplication {
 
@@ -52,6 +53,44 @@ public class BackendApplication {
                 out.addProperty("a", a);
                 out.addProperty("b", b);
                 out.addProperty("sum", a + b);
+                return out;
+            } catch (Exception e) {
+                res.status(400);
+                JsonObject err = new JsonObject();
+                err.addProperty("error", "invalid JSON");
+                return err;
+            }
+        }, gson::toJson);
+
+        // New endpoint: evaluate selections (lineages/archetypes)
+        // Expects JSON: { "selections": [ { "lineage": "lin1", "archetype": "arch1" }, ... ] }
+        // Returns JSON: { "results": [ { "lineage":..., "archetype":..., "score":... }, ... ] }
+        post("/api/evaluate", (req, res) -> {
+            res.type("application/json");
+            try {
+                JsonObject in = gson.fromJson(req.body(), JsonObject.class);
+                JsonArray selections = in.has("selections") ? in.getAsJsonArray("selections") : null;
+                JsonArray results = new JsonArray();
+
+                if (selections != null) {
+                    for (int i = 0; i < selections.size(); i++) {
+                        JsonObject sel = selections.get(i).getAsJsonObject();
+                        String lineage = sel.has("lineage") ? sel.get("lineage").getAsString() : "";
+                        String archetype = sel.has("archetype") ? sel.get("archetype").getAsString() : "";
+
+                        // Placeholder computation: you can replace this with your real math.
+                        int score = 5;//(lineage != null ? lineage.length() : 0) + (archetype != null ? archetype.length() : 0);
+
+                        JsonObject outItem = new JsonObject();
+                        outItem.addProperty("lineage", lineage);
+                        outItem.addProperty("archetype", archetype);
+                        outItem.addProperty("score", score);
+                        results.add(outItem);
+                    }
+                }
+
+                JsonObject out = new JsonObject();
+                out.add("results", results);
                 return out;
             } catch (Exception e) {
                 res.status(400);
