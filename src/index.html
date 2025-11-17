@@ -13,25 +13,44 @@
     <main>
     <h1 class="title">Metaphor: ReFantazio Synthesis Calculator</h1>
         <p>A simple online tool for keeping track of the equipped party's Metaphor: ReFantazio Synthesis skills.</p>
-        <p>Select the lineage/archetype of each character in party, and list of active synthesis skills will appear on the right</p>
+        <p>Select the lineage/archetype of each character in party, and a list of all active synthesis skills will appear on the right</p>
         <div class="two-column">
             <section class="panel" id="select">
-                <h2>Select</h2>
                 <!-- Two-column selects; fill options as needed -->
                 <form class="select-grid" id="select-form" onsubmit="return false;">
-                    <label for="select-a">Select A
-                        <select id="select-a" name="selectA">
+                    <label for="select-lin-a">Select Lineage
+                        <select id="select-lin-a" name="selectLinA">
                             <option value="">-</option>
-                            <option value="">Seeker</option>
-                            <option value="">Warrior</option>
-                            <option value="">Knight</option>
-                            <option value="">Mage</option>
+                            <option value="seeker">Seeker</option>
+                            <option value="warrior">Warrior</option>
+                            <option value="knight">Knight</option>
+                            <option value="mage">Mage</option>
                             <!-- Add options here -->
                         </select>
                     </label>
 
-                    <label for="select-b">Select B
-                        <select id="select-b" name="selectB">
+                    <label for="select-arch-a">Select Archetype
+                        <select id="select-arch-a" name="selectArchA">
+                            <option value="">-</option>
+                            <!-- Add options here -->
+                        </select>
+                    </label>
+                </form>
+
+                <form class="select-grid" id="select-form" onsubmit="return false;">
+                    <label for="select-lin-b">Select Lineage
+                        <select id="select-lin-b" name="selectLinB">
+                            <option value="">-</option>
+                            <option value="seeker">Seeker</option>
+                            <option value="warrior">Warrior</option>
+                            <option value="knight">Knight</option>
+                            <option value="mage">Mage</option>
+                            <!-- Add options here -->
+                        </select>
+                    </label>
+
+                    <label for="select-arch-b">Select Archetype
+                        <select id="select-arch-b" name="selectArchB">
                             <option value="">-</option>
                             <!-- Add options here -->
                         </select>
