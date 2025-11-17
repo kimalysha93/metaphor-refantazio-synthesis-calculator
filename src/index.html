@@ -17,7 +17,26 @@
         <div class="two-column">
             <section class="panel" id="select">
                 <h2>Select</h2>
-                <p>select here</p>
+                <!-- Two-column selects; fill options as needed -->
+                <form class="select-grid" id="select-form" onsubmit="return false;">
+                    <label for="select-a">Select A
+                        <select id="select-a" name="selectA">
+                            <option value="">-</option>
+                            <option value="">Seeker</option>
+                            <option value="">Warrior</option>
+                            <option value="">Knight</option>
+                            <option value="">Mage</option>
+                            <!-- Add options here -->
+                        </select>
+                    </label>
+
+                    <label for="select-b">Select B
+                        <select id="select-b" name="selectB">
+                            <option value="">-</option>
+                            <!-- Add options here -->
+                        </select>
+                    </label>
+                </form>
             </section>
             <section class="panel" id="results">
                 <h2>Results</h2>
