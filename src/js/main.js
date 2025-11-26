@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			// Placeholder option
 			const placeholder = document.createElement('option');
 			placeholder.value = '';
-			placeholder.textContent = lineageValue ? '-- choose archetype --' : '-- choose lineage first --';
+			placeholder.textContent = lineageValue ? '---' : '-- choose lineage first --';
 			archetypeSelect.appendChild(placeholder);
 
 			const list = archetypeMap[lineageValue];
@@ -58,42 +58,48 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		}
 
-		async function sendSelections() {
-			if (!resultsContent) return;
+		
+
+		function calculateResults() {
 			// collect selections (supporting optional B selects)
+			
+			const lineageCount = {
+				"seeker":0,
+				"warrior":0,
+				"knight":0,
+				"mage":0
+			}
 			const selections = [];
 			if (lineageSelectA) selections.push({ lineage: lineageSelectA.value || '', archetype: (archetypeSelectA ? archetypeSelectA.value : '') || '' });
 			if (lineageSelectB) selections.push({ lineage: lineageSelectB.value || '', archetype: (archetypeSelectB ? archetypeSelectB.value : '') || '' });
 
-			// Show loading state
-			resultsContent.textContent = 'Loading...';
+			if (lineageSelectA) lineageCount[lineageSelectA.value] += 1;
+			if (lineageSelectB) lineageCount[lineageSelectB.value] += 1;
+			//if (lineageSelectC) lineageCount[lineageSelectC.value] += 1;
+			//if (lineageSelectD) lineageCount[lineageSelectD.value] += 1;
+			
+			
 
-			try {
-				const resp = await fetch('/api/evaluate', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json'
-					},
-					body: JSON.stringify({ selections })
-				});
+			console.log('Lineage counts:', lineageCount);
+			// Compute results locally
+			const results = selections.map((sel, idx) => {
+				// Placeholder calculation: you can replace this with your real math
+				// For now, just echo the selection and compute a simple score
+				const score = (sel.lineage ? sel.lineage.length : 0) + (sel.archetype ? sel.archetype.length : 0);
+				return {
+					lineage: sel.lineage,
+					archetype: sel.archetype,
+					score: score
+				};
+			});
 
-				if (!resp.ok) {
-					const txt = await resp.text();
-					resultsContent.textContent = 'Error: ' + txt;
-					return;
-				}
-
-				const data = await resp.json();
-				renderResults(data);
-			} catch (err) {
-				resultsContent.textContent = 'Network error: ' + err.message;
-			}
+			renderResults({ results });
 		}
 
 		function renderResults(data) {
 			if (!resultsContent) return;
-			if (!data || !data.results) {
-				resultsContent.textContent = 'No results.';
+			if (!data || !data.results || data.results.length === 0) {
+				resultsContent.textContent = 'No results yet. Select lineage and archetype to see results.';
 				return;
 			}
 
@@ -104,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			data.results.forEach((r, idx) => {
 				const item = document.createElement('div');
 				item.className = 'result-item';
-				item.innerHTML = `<strong>Selection ${idx + 1}:</strong> Lineage = ${escapeHtml(r.lineage)}, Archetype = ${escapeHtml(r.archetype)} — Score = ${escapeHtml(String(r.score))}`;
+				item.innerHTML = `<strong>Selection ${idx + 1}:</strong> Lineage = ${escapeHtml(r.lineage)}, Archetype = ${escapeHtml(r.archetype)}, Score = ${r.score}`;
 				list.appendChild(item);
 			});
 
@@ -122,27 +128,27 @@ document.addEventListener('DOMContentLoaded', () => {
 		populateArchetypes(lineageSelectA ? lineageSelectA.value : '', archetypeSelectA);
 		populateArchetypes(lineageSelectB ? lineageSelectB.value : '', archetypeSelectB);
 
-		// Events: update archetypes and then send selections to backend
+		// Events: update archetypes and then calculate results locally
 		if (lineageSelectA) {
 			lineageSelectA.addEventListener('change', (e) => {
 				populateArchetypes(e.target.value, archetypeSelectA);
-				sendSelections();
+				calculateResults();
 			});
 		}
 		if (archetypeSelectA) {
-			archetypeSelectA.addEventListener('change', () => sendSelections());
+			archetypeSelectA.addEventListener('change', () => calculateResults());
 		}
 
 		if (lineageSelectB) {
 			lineageSelectB.addEventListener('change', (e) => {
 				populateArchetypes(e.target.value, archetypeSelectB);
-				sendSelections();
+				calculateResults();
 			});
 		}
 		if (archetypeSelectB) {
-			archetypeSelectB.addEventListener('change', () => sendSelections());
+			archetypeSelectB.addEventListener('change', () => calculateResults());
 		}
 
-		// initial send to populate results if any
-		sendSelections();
+		// initial calculation to populate results if any
+		calculateResults();
 	});

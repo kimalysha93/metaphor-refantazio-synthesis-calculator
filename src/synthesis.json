@@ -1,0 +1,66 @@
+{
+    "knight":{
+            "knight":{
+                "jump-thrust":{
+                    "name":"Jump Thrust",
+                    "description":"Deals medium physical Pierce damage to one enemy. Lowers their Defence for 3 turns.",
+                    "party-requirement":"Warrior, Brawler, or Berserker Lineages"
+                },
+                "protect-guard":{
+                    "name":"Protect Guard (Synthesis)",
+                    "description":"Raises a barrier that nullifies one Slash/Pierce/Strike attack for one ally.",
+                    "party-requirement":"Knight, Healer, or Commander Lineages"
+                },
+                "magic-guard":{
+                    "name":"Magic Guard",
+                    "description":"Raises a barrier that nullifies one elemental attack for all allies in caster's row.",
+                    "party-requirement":"Seeker, Mage, or Healer Lineages"
+                },
+                "hammer-of-justice":{
+                    "name":"Hammer of Justice",
+                    "description":"Deals heavy physical Pierce damage to one enemy. Inflicts a one-time weakness to Pierce.",
+                    "party-requirement":"Brawler, Merchant, or Summoner Lineages"
+                }
+            }
+        },
+        
+    "seeker":{
+        "seeker":{
+            "tetrabreak":{
+                "name":"Tetrabreak",
+                "description":"Negates one enemy's Repel Physical skill.",
+                "party-requirement":"Thief, Faker, or Merchant Lineages"
+            },
+            "rider-of-the-blade":{
+                "name":"Rider of the Blade",
+                "description":"Deals heavy physical Light damage to one enemy.",
+                "party-requirement":"Knight, Healer, or Commander Lineages"
+            },
+            "horse-drawn-carnage":{
+                "name":"Horse-Drawn Carnage",
+                "description":"Deals heavy physical Strike damage to one enemy.",
+                "party-requirement":"Warrior, Brawler, or Berserker Lineages"
+            },
+            "gacyc":{
+                "name":"Gacyc",
+                "description":"Deals weak magic Wind damage to all enemies. Requires Cyc.",
+                "party-requirement":"Seeker, Mage, or Healer Lineages"
+            },
+            "matarukaja":{
+                "name":"Matarukaja (Synthesis)",
+                "description":"Increases all allies' Attack for 3 turns. Requires Tarukaja.",
+                "party-requirement":"Seeker, Knight, or Commander Lineages"
+            },
+            "adventurers-curiosity":{
+                "name":"Adventurerer's Curiosity",
+                "description":"Increases Critical Rate for all allies for 3 turns.",
+                "party-requirement":"Gunner, Masked Dancer, or Beserker Lineages"
+            },
+            "gacyclo":{
+                "name":"Gacyclo",
+                "description":"Deals medium Wind damage to all allies. Requires Cyclo.",
+                "party-requirement":"Seeker, Mage, or Healer Lineages"
+            }
+        }
+    }
+}
