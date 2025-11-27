@@ -3,7 +3,14 @@ let skills = null;
 const loadSkills = async () => {
     if (!skills) {
         try {
-            const response = await fetch('../data/synthesis.json');
+            // Get the base path for the application (works on GitHub Pages and locally)
+            const basePath = window.location.pathname.includes('/metaphor-refantazio-synthesis-calculator/')
+                ? '/metaphor-refantazio-synthesis-calculator/'
+                : '/';
+            const response = await fetch(basePath + 'data/synthesis.json');
+            if (!response.ok) {
+                throw new Error(`Failed to load synthesis.json: ${response.status}`);
+            }
             skills = await response.json();
         } catch (error) {
             console.error('Failed to load synthesis data:', error);
