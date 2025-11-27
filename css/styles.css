@@ -1,24 +1,25 @@
 @font-face {
     font-family: "playfair-display";
-    src: url("/PlayfairDisplay-Regular.ttf") format(truetype);
+    src: url("/assets/PlayfairDisplay-Regular.ttf") format('truetype');
 }
 @font-face {
     font-family: "playfair-display-bold";
-    src: url("/PlayfairDisplay-Bold.ttf") format(truetype);
+    src: url("/assets/PlayfairDisplay-Bold.ttf") format('truetype');
 }
 @font-face {
     font-family: "cinzel-black";
-    src: url("/cinzel.black.ttf") format(truetype);
+    src: url("/assets/cinzel.black.ttf") format('truetype');
 }
 
 body {
     margin: 0;
     font-family: "playfair-display-bold", sans-serif;
-    background-image: url("/refantazio_background.jpg");
+    background-image: url("/assets/refantazio_background.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: black;
     min-height: 100vh;
     color: white;
 }

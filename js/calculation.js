@@ -1,4 +1,16 @@
-import skills from '../data/synthesis.json' with { type: 'json' };
+let skills = null;
+
+const loadSkills = async () => {
+    if (!skills) {
+        try {
+            const response = await fetch('../data/synthesis.json');
+            skills = await response.json();
+        } catch (error) {
+            console.error('Failed to load synthesis data:', error);
+        }
+    }
+    return skills;
+};
 
 export class calculateSynthesis {
     constructor(lineage, archetype, lineageCount, royalCount) {
@@ -16,7 +28,10 @@ export class calculateSynthesis {
         console.log('Loaded synthesis data:', skills);
     }
 
-    calculateSynthesis(){
+    async calculateSynthesis(){
+        // Load skills if not already loaded
+        await loadSkills();
+        
         // need to clone or else it modifies the original counts
         const localLineageCount = structuredClone(this.lineageCount);
         localLineageCount[this.lineage] -= 1;
