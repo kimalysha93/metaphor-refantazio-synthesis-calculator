@@ -1,10 +1,11 @@
 import skills from '../data/synthesis.json' with { type: 'json' };
 
 export class calculateSynthesis {
-    constructor(lineage, archetype, lineageCount) {
+    constructor(lineage, archetype, lineageCount, royalCount) {
         this.lineage = lineage;
         this.archetype = archetype;
         this.lineageCount = lineageCount;
+        this.royalCount = royalCount;
         // console.log('Calculating synthesis for:', lineage, archetype, lineageCount);
     }
 
@@ -31,10 +32,12 @@ export class calculateSynthesis {
         for (const skillKey in possibleSkills) {
             const skill = possibleSkills[skillKey];
             const requirements = skill['count'];
-            if (skill['count-2']) {
-                console.log(`Skill ${skillKey} has alternative requirements.`);
-                console.log("Skills 1:", requirements);
-                console.log("Skills 2:", skill['count-2']);
+            if (skillKey == "armaggedons-final-sire"){
+                if (this.royalCount >= 3) {
+                    synthesizedSkills.push(skills[this.lineage][this.archetype][skillKey]);
+                }
+            } else if (skill['count-2']) {
+                // skill has two sets of requirements
                 const requirements2 = skill['count-2'];
                 for (const reqLineage in requirements) {
                     // if first set of requirements met
