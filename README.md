@@ -1,34 +1,3 @@
-# My Webpage
+# Metaphor ReFantazio Synthesis Calculation
 
-This project is a simple webpage that demonstrates the use of HTML, CSS, and JavaScript. It includes a header component and is structured to allow for easy expansion and modification.
-
-## Project Structure
-
-```
-my-webpage
-├── src
-│   ├── index.html        # Main HTML document
-│   ├── css
-│   │   └── styles.css    # Styles for the webpage
-│   ├── js
-│   │   └── main.js       # JavaScript for interactivity
-│   ├── components
-│   │   └── header.html    # Header component
-│   └── assets
-│       ├── fonts         # Folder for font files
-│       └── icons         # Folder for icon files
-├── package.json          # npm configuration file
-├── .gitignore            # Files to ignore in version control
-└── README.md             # Project documentation
-```
-
-## Setup Instructions
-
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Run `npm install` to install any dependencies listed in `package.json`.
-4. Open `src/index.html` in your web browser to view the webpage.
-
-## Overview
-
-This webpage serves as a starting point for further development. You can customize the styles in `src/css/styles.css`, add functionality in `src/js/main.js`, and modify the header in `src/components/header.html`. The assets folder is available for storing fonts and icons used throughout the project.
+This personal project is a simple online tool to be used when playing _Metaphor: ReFantazio_. It was inspired by the online fusions calculators that others have created for the _Persona_ and _SMT_ games. _Metaphor: Refantazio_ is lacking a menu area where it's possible to view all active synthesis skills on one screen. While playing I found planning party compositions in-game was often tedious or repetetive due to the necessary backtracking, so this project was created to help assist with that. Lineage and Archetype can be selected by the user, and the results will display a list of all the active Synthesis skills for the selected party composition.
