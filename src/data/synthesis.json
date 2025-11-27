@@ -41,6 +41,58 @@
                     "commander":1
                 }
             }
+        },
+        "destroyer":{
+            "deadly-eraser":{
+                "name":"Deadly Eraser",
+                "description":"Deals severe physical Almighty damage to one enemy. Removes status, Repel, and strength buff effects on the target.",
+                "party-requirement":"Brawler, Merchant, or Summoner Lineages",
+                "count":{
+                    "merchant":1,
+                    "brawler":1,
+                    "summoner":1
+                }                    
+            },
+            "rampage-slash":{
+                "name":"Rampage Slash",
+                "description":"Deals extreme physical Slash damage to one enemy. Ignores resistances.",
+                "party-requirement":"Warrior, Brawler, or Berserker Lineages",
+                "count":{
+                    "warrior":1,
+                    "brawler":1,
+                    "berserker":1
+                }
+            },
+            "wild-bore":{
+                "name":"Wild Bore",
+                "description":"Deals extreme physical Pierce damage to one enemy. Significantly decreases their Attack for 3 turns.",
+                "party-requirement":"Gunner, Faker, or Summoner Lineages",
+                "count":{
+                    "gunner":1,
+                    "faker":1,
+                    "summoner":1
+                }
+            },
+            "wanton-destruction":{
+                "name":"Wanton Destruction",
+                "description":"Deals extreme physical Strike damage to one enemy. Inflicts a one-time weakness to Strike.",
+                "party-requirement":"Knight, Healer, or Commander Lineages",
+                "count":{
+                    "knight":1,
+                    "healer":1,
+                    "commander":1
+                }
+            },
+            "battlecry-tackle":{
+                "name":"Battlecry Tackle",
+                "description":"Deals heavy physical Strike damage to all enemies 1-3 times. Ignores resistances.",
+                "party-requirement":"Seeker, Knight, or Commander Lineages",
+                "count":{
+                    "seeker":1,
+                    "knight":1,
+                    "commander":1
+                }
+            }
         }
     },
     "brawler":{
@@ -85,6 +137,38 @@
                     "seeker":1,
                     "mage":1,
                     "healer":1
+                }
+            }
+        },
+        "martial-artist":{
+            "boltburst-fist":{
+                "name":"Boltburst Fist",
+                "description":"Deals medium physical Electric damage to all enemies 2-4 times.",
+                "party-requirement":"Warrior, Brawler, or Berserker Lineages",
+                "count":{
+                    "warrior":1,
+                    "brawler":1,
+                    "berserker":1
+                }                    
+            },
+            "ultimate-energy-ray":{
+                "name":"Ultimate Energy Ray",
+                "description":"Deals severe physical Light damage to one enemy. Power proportional to caster's remaining HP.",
+                "party-requirement":"Seeker, Mage, or Healer Lineages",
+                "count":{
+                    "seeker":1,
+                    "mage":1,
+                    "healer":1
+                }
+            },
+            "bodhisattvas-palm":{
+                "name":"Bodhisattva's Palm",
+                "description":"Severe phys. Strike damage to 1 enemy. Inflicts 1 time weakness to Strike. Damage relative to caster's current HP.",
+                "party-requirement":"Gunner, Faker, or Summoner Lineages",
+                "count":{
+                    "gunner":1,
+                    "faker":1,
+                    "summoner":1
                 }
             }
         }
@@ -166,11 +250,11 @@
             "healing-shelter-formation":{
                 "name":"Healing Shelter Formation",
                 "description":"All allies recover 10% of their HP each turn for 3 turns.",
-                "party-requirement":"Gunner, Faker, or Summoner Lineages",
+                "party-requirement":"Knight, Healer, or Commander Lineages",
                 "count":{
-                    "gunner":1,
-                    "faker":1,
-                    "summoner":1
+                    "knight":1,
+                    "healer":1,
+                    "commander":1
                 }
             },
             "megidola":{
@@ -181,6 +265,68 @@
                     "gunner":1,
                     "faker":1,
                     "summoner":1
+                }
+            }
+        },
+        "warlord":{
+            "blusterblast-maneuver":{
+                "name":"Blusterblast Maneuver",
+                "description":"Deals extreme magic Fire damage to all enemies. Decreases their Hit/Evasion for 3 turns.",
+                "party-requirement":"Mage, Masked Dancer, or Summoner Lineages",
+                "count":{
+                    "mage":1,
+                    "summoner":1,
+                    "masked-dancer":1
+                }                    
+            },
+            "dynast-formation":{
+                "name":"Dynast Formation",
+                "description":"Increases Attack/Defence/Hit Evasion for all allies by three ranks for 3 turns.",
+                "party-requirement":"Seeker, Knight, or Commander Lineages",
+                "count":{
+                    "knight":1,
+                    "seeker":1,
+                    "commander":1
+                }
+            },
+            "megidolaon":{
+                "name":"Megidolaon",
+                "description":"Deals extreme magic Almighty damage to all enemies.",
+                "party-requirement":"Gunner, Faker, or Summoner Lineages",
+                "count":{
+                    "gunner":1,
+                    "faker":1,
+                    "summoner":1
+                }
+            },
+            "icewolf-offensive":{
+                "name":"Icewolf Offensive",
+                "description":"Deals extreme magic Ice damage to one enemy.",
+                "party-requirement":"Seeker, Mage, or Healer Lineages",
+                "count":{
+                    "mage":1,
+                    "seeker":1,
+                    "healer":1
+                }
+            },
+            "eureka-moment":{
+                "name":"Eureka Moment",
+                "description":"Deals extreme magic Fire damage to al enemies. Ignores resistances. May inflict Burn. Requires Megidola.",
+                "party-requirement":"Thief, Faker, or Merchant Lineages",
+                "count":{
+                    "thief":1,
+                    "faker":1,
+                    "merchant":1
+                }
+            },
+            "healing-shelter-formation":{
+                "name":"Healing Shelter Formation",
+                "description":"All allies recover 10% of their HP each turn for 3 turns.",
+                "party-requirement":"Knight, Healer, or Commander Lineages",
+                "count":{
+                    "knight":1,
+                    "healer":1,
+                    "commander":1
                 }
             }
         }
@@ -215,6 +361,48 @@
                     "healer":1,
                     "knight":1,
                     "commander":1
+                }
+            },
+            "debilitate":{
+                "name":"Debilitate",
+                "description":"Decrease one enemy's Attack/Defence/Hit/Evasion for 3 turns.",
+                "party-requirement":"Thief, Faker, or Merchant Lineages AND Thief, Faker, or Merchant Lineages",
+                "count":{
+                    "thief":1,
+                    "faker":1,
+                    "merchant":1
+                },
+                "count-2":{
+                    "thief":1,
+                    "faker":1,
+                    "merchant":1
+                }
+            },
+            "free-juggling":{
+                "name":"Free Juggling",
+                "description":"Deals weak physical Almighty damage to all enemies without consuming MP",
+                "party-requirement":"Gunner, Faker, or Summoner Lineages",
+                "count":{
+                    "gunner":1,
+                    "faker":1,
+                    "summoner":1
+                }
+            }
+        },
+        "trickster":{
+            "miracle-cirques":{
+                "name":"Miracle Cirques",
+                "description":"Deals extreme physical Almighty damage to all enemies without consuming MP.",
+                "party-requirement":"Knight, Healer, or Commander Lineages AND Thief, Faker, or Merchant Lineages",
+                "count":{
+                    "healer":1,
+                    "knight":1,
+                    "commander":1
+                },
+                "count-2":{
+                    "thief":1,
+                    "faker":1,
+                    "merchant":1
                 }
             },
             "debilitate":{
@@ -308,6 +496,68 @@
                     "commander":1
                 }
             }
+        },
+        "dragoon":{
+            "dragoroa":{
+                "name":"Dragoroa",
+                "description":"Only usable from back row.  Deals extreme magic Fire damage to one enemy. May inflict Burn.",
+                "party-requirement":"Mage, Masked Dancer, or Summoner Lineages",
+                "count":{
+                    "mage":1,
+                    "masked-dancer":1,
+                    "summoner":1
+                }                    
+            },
+            "mania-bullet":{
+                "name":"Mania Bullet",
+                "description":"Only usable from back row. Heavy phys. Pierce damage to one enemy. Inflicts 1-time weakness to Slash/Pierce/Strike.",
+                "party-requirement":"Thief, Faker, or Merchant Lineages",
+                "count":{
+                    "thief":1,
+                    "faker":1,
+                    "merchant":1
+                }
+            },
+            "coldragoroa":{
+                "name":"Coldragoroa",
+                "description":"Only usable from back row. Deals extreme magic Ice damage to one enemy. May inflict Forstbite.",
+                "party-requirement":"Seeker, Mage, or Healer Lineages",
+                "count":{
+                    "mage":1,
+                    "seeker":1,
+                    "healer":1
+                }
+            },
+            "draco-ray":{
+                "name":"Draco Ray",
+                "description":"Only usable from back row. Deals severe magic Light damage to one enemy. Ignore resistances.",
+                "party-requirement":"Gunner, Faker, or Summoner Lineages",
+                "count":{
+                    "gunner":1,
+                    "faker":1,
+                    "summoner":1
+                }
+            },
+            "bullet-barrage":{
+                "name":"Bullet Barrage",
+                "description":"Only usable from back row. Deals severe physical Pierce damage to one enemy. Ignores resistances.",
+                "party-requirement":"Knight, Healer, or Commander Lineages",
+                "count":{
+                    "knight":1,
+                    "healer":1,
+                    "commander":1
+                }
+            },
+            "thunder-fang":{
+                "name":"Thunder Fang",
+                "description":"Deals extreme magic Electric damage to all enemies.",
+                "party-requirement":"Gunner, Masked Dancer, or Berserker Lineages",
+                "count":{
+                    "gunner":1,
+                    "masked-dancer":1,
+                    "berserker":1
+                }
+            }
         }
     },
     "healer":{
@@ -362,6 +612,48 @@
                     "seeker":1,
                     "mage":1,
                     "healer":1
+                }
+            },
+            "magical-injection":{
+                "name":"Magical Injection",
+                "description":"Raises a barrier that nullifies one attack that would inflict a status ailment. Affects all allies.",
+                "party-requirement":"Brawler, Merchant, or Summoner Lineages",
+                "count":{
+                    "brawler":1,
+                    "merchant":1,
+                    "summoner":1
+                }
+            },
+            "godly-blessing":{
+                "name":"Godly Blessing",
+                "description":"Revives all allies from KO with full HP.",
+                "party-requirement":"Mage, Masked Dancer, Summoner Lineages",
+                "count":{
+                    "mage":1,
+                    "masked-dancer":1,
+                    "summoner":1
+                }
+            }
+        },
+        "saviour":{
+            "mahamadyne":{
+                "name":"Mahamadyne",
+                "description":"Deals heavy magic Light damage to all enemies. Requires Hamadyne.",
+                "party-requirement":"Seeker, Mage, or Healer Lineages",
+                "count":{
+                    "seeker":1,
+                    "mage":1,
+                    "healer":1
+                }             
+            },
+            "divine-punishment":{
+                "name":"Divine Punishment",
+                "description":"Deals extreme magic Light damage to all enemies. Inflicts a one-time weakness to Light.",
+                "party-requirement":"Gunner, Masked Dancer, or Berserker Lineages",
+                "count":{
+                    "gunner":1,
+                    "masked-dancer":1,
+                    "berserker":1
                 }
             },
             "magical-injection":{
@@ -562,6 +854,43 @@
                 "description":"Raises a barrier that nullifies one physical attack for all allies in caster's row.",
                 "party-requirement":"Knight, Healer, or Commander Lineages",
                 "count":{
+                    "knight":1,
+                    "healer":1,
+                    "commander":1
+                }
+            }
+        },
+        "dark-knight":{
+            "flying-guard-thrust":{
+                "name":"Flying Guard Thrust",
+                "description":"Deals extreme physical Pierce damage to one enemy. Lowers their Defence for 3 turns.",
+                "party-requirement":"Warrior, Brawler, or Berserker Lineages",
+                "count":{
+                    "warrior":1,
+                    "brawler":1,
+                    "berserker":1
+                }                    
+            },
+            "blackguards-hammer":{
+                "name":"Blackguard's Hammer",
+                "description":"Deals severe physical Dark damage to one enemy. Inflicts a one-time weakness to Dark.",
+                "party-requirement":"Brawler, Merchant, or Summoner Lineages",
+                "count":{
+                    "brawler":1,
+                    "merchant":1,
+                    "summoner":1
+                }
+            },
+            "peerless-shadow":{
+                "name":"Peerless Shadow",
+                "description":"Deals severe physical Dark damage to all enemies. Decreases their Attack/Defence/Hit/Evasion for 3 turns.",
+                "party-requirement":"Warrior, Thief, or Masked Dancer AND Knight, Healer, or Commander Lineages",
+                "count":{
+                    "warrior":1,
+                    "thief":1,
+                    "masked-dancer":1
+                },
+                "count-2":{
                     "knight":1,
                     "healer":1,
                     "commander":1
@@ -886,6 +1215,58 @@
                     "merchant":1
                 }
             }
+        },
+        "persona-master":{
+            "masquerade-change":{
+                "name":"Masquerade Change",
+                "description":"Greatly increases the party's physical attack damage once per battle.",
+                "party-requirement":"Gunner, Masked Dancer, or Berserker Lineages",
+                "count":{
+                    "gunner":1,
+                    "masked-dancer":1,
+                    "berserker":1
+                }
+            },
+            "hellfire-dance":{
+                "name":"Hellfire Dance",
+                "description":"Inflicts all enemies with a one-time weakness to Fire. Ignores resistances.",
+                "party-requirement":"Mage, Masked Dancer, or Summoner Lineages",
+                "count":{
+                    "masked-dancer":1,
+                    "mage":1,
+                    "summoner":1
+                }
+            },
+            "ice-blue-dance":{
+                "name":"Ice-Blue Dance",
+                "description":"Inflicts all enemies with a one-time weakness to Ice. Ignores resistances.",
+                "party-requirement":"Seeker, Mage, or Healer Lineages",
+                "count":{
+                    "healer":1,
+                    "mage":1,
+                    "seeker":1
+                }
+            },
+            "sable-dance":{
+                "name":"Sable Dance",
+                "description":"Inflicts all enemies with a one-time weakness to Dark. Ignores resistances.",
+                "party-requirement":"Warrior, Thief, or Masked Dancer Lineages",
+                "count":{
+                    "thief":1,
+                    "warrior":1,
+                    "masked-dancer":1
+                }
+            },
+            "danse-macabre":{
+                "name":"Danse Macabre",
+                "description":"High chance of one-hit killing all enemies.",
+                "party-requirement":"Thief, Faker, or Merchant Lineages",
+                "count":{
+                    "faker":1,
+                    "thief":1,
+                    "merchant":1
+                }
+            }
         }
     },
     "merchant":{
@@ -908,6 +1289,48 @@
                     "brawler":1,
                     "merchant":1,
                     "summoner":1
+                }
+            }
+        },
+        "tycoon":{
+            "all-reset":{
+                "name":"All Reset",
+                "description":"Removes nearly all beneficial effects from all enemies.",
+                "party-requirement":"Thief, Faker, or Merchant Lineages",
+                "count":{
+                    "thief":1,
+                    "faker":1,
+                    "merchant":1
+                }
+            },
+            "fortune-slots":{
+                "name":"Fortune Slots",
+                "description":"Low Hit Rate, but all hits deal critical physical Almighty damage.",
+                "party-requirement":"Brawler, Merchant, or Summoner Lineages",
+                "count":{
+                    "brawler":1,
+                    "merchant":1,
+                    "summoner":1
+                }
+            },
+            "money-power":{
+                "name":"Money Power",
+                "description":"Increases all of one ally's stats by three ranks for 3 turns. Consumes money instead of MP.",
+                "party-requirement":"Gunner, Masked Dancer, or Berserker Lineages",
+                "count":{
+                    "gunner":1,
+                    "masked-dancer":1,
+                    "berserker":1
+                }
+            },
+            "golden-soldier":{
+                "name":"Golden Soldier",
+                "description":"Deals extreme physical Almighty damage to all enemies.",
+                "party-requirement":"Warrior, Brawler, or Berserker Lineages",
+                "count":{
+                    "warrior":1,
+                    "brawler":1,
+                    "berserker":1
                 }
             }
         }
@@ -1241,6 +1664,38 @@
                     "berserker":1
                 }
             }
+        },
+        "devil-summoner":{
+            "summon-tyrant":{
+                "name":"Summon Tyrant",
+                "description":"Deals severe magic Almighty damage to all enemies. May inflict Hex.",
+                "party-requirement":"Thief, Faker, or Merchant Lineages",
+                "count":{
+                    "thief":1,
+                    "faker":1,
+                    "merchant":1
+                }                    
+            },
+            "summon-fury":{
+                "name":"Summon Fury",
+                "description":"Deals extreme magic Strike damage to all enemies. Decreases their Attack/ Defence for 3 turns.",
+                "party-requirement":"Knight, Healer, or Commander Lineages",
+                "count":{
+                    "knight":1,
+                    "healer":1,
+                    "commander":1
+                }
+            },
+            "hadean-icecrag":{
+                "name":"Hadean Icecrag",
+                "description":"Deals extreme magic Ice damage to all enemies.",
+                "party-requirement":"Seeker, Mage, or Healer Lineages",
+                "count":{
+                    "mage":1,
+                    "seeker":1,
+                    "healer":1
+                }
+            }
         }
     },
     "thief":{
@@ -1295,6 +1750,18 @@
                     "warrior":1,
                     "thief":1,
                     "masked-dancer":1
+                }                    
+            }
+        },
+        "ninja":{
+            "ice-art":{
+                "name":"Ice Art",
+                "description":"Deals extreme magic Ice damage to one enemy. May inflict Frostbite",
+                "party-requirement":"Seeker, Mage, or Healer Lineages",
+                "count":{
+                    "seeker":1,
+                    "mage":1,
+                    "healer":1
                 }                    
             }
         }
